@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <time.h>
 
 #define WINDOWS 1
 #ifdef WINDOWS
@@ -10,8 +9,38 @@
 #define CLEARSCREEN system("clear")
 #endif
 
+void random();
+
+{
+    int i;
+    i = rand()%100;
+}
+
+void wait()
+
+{
+    int iElapsedTime = 0;
+    int iCurrentTime = 0;
+    int seconds;
+    
+    iCurrentTime = time(NULL);
+    
+    do {
+        iElapsedTime = time(NULL);
+    }
+    while((iElapsedTime - iCurrentTime) < seconds);
+}
+
+void clear()
+
+{
+    CLEARSCREEN;
+}
+
+    
 int main()
 {
+
     char cYesNo = '\0';
     int iSelec  = 0;
     int iResp1 = 0;
@@ -28,9 +57,8 @@ int main()
     int i4 = 0;
     int i5 = 0;
     int iCounter = 0;
+    int x;
     
-    srand(time(NULL));
-    srand(time(NULL));
     srand(time(NULL));
     
     
@@ -52,10 +80,10 @@ int main()
             
             printf("\nConcentrate on the next three numbers\n");
             printf("\n%d\t%d\t%d\n", i1, i2, i3);
-            iCurrentTime = time1(NULL);
+            iCurrentTime = time(NULL);
             
             do {
-                iElapsedTime = time1(NULL);
+                iElapsedTime = time(NULL);
             }
             while((iElapsedTime - iCurrentTime) < 3);
             
@@ -80,10 +108,10 @@ int main()
             
             printf("\nConcentrate on the next five numbers\n");
             printf("\n%d\t%d\t%d\t%d\t%d\n", i1, i2, i3, i4, i5);
-            iCurrentTime = time2(NULL);
+            iCurrentTime = time(NULL);
             
             do {
-                iElapsedTime = time2(NULL);
+                iElapsedTime = time(NULL);
             }
             while((iElapsedTime - iCurrentTime) < 5);
             
@@ -109,10 +137,10 @@ int main()
             
             printf("\nConcentrate on the next five numbers\n");
             printf("\n%d\t%d\t%d\t%d\t%d\n", i1, i2, i3, i4, i5);
-            iCurrentTime = time3(NULL);
+            iCurrentTime = time(NULL);
             
             do {
-                iElapsedTime = time3(NULL);
+                iElapsedTime = time(NULL);
             }
             while((iElapsedTime - iCurrentTime) < 2);
             
@@ -130,7 +158,7 @@ int main()
         if (iSelec == 4)
             
             
-            
+            }
             
             return 0;
-    }}
+    }
